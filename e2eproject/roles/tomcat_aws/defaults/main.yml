@@ -1,0 +1,8 @@
+---
+# defaults file for tomcat_aws
+
+      region: us-east-1
+      instance_type: t2.micro
+      ami: ami-0394fe9914b475c53  # Redhat
+      keypair: devopskey  # pem file name
+

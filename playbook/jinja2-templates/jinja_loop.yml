@@ -1,0 +1,10 @@
+---
+- hosts: localhost 
+  vars:
+    list1: ['Template iterate','Template loop','Template item']
+  tasks:
+    - name: Ansible template loop example
+      template:
+        src: templates_example2.j2
+        dest: /etc/ansible/playbook/output.txt
+        mode: 0777

@@ -1,0 +1,26 @@
+---
+-  hosts: web
+   vars:
+    packages:
+        - httpd
+        - binutils
+        - glibc
+        - ksh
+        - libaio
+        - libXext
+        - gcc
+        - make
+        - sysstat
+        - unixODBC
+        - mongodb
+        - nodejs
+        - grunt
+   tasks:
+   - yum:
+       name: '{{ packages  }}'
+       state: present 
+     register: temp_var
+
+   - name: debugging
+     debug: msg="{{temp_var.stdout_lines}}" 
+

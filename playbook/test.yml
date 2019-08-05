@@ -1,0 +1,10 @@
+---
+
+- hosts: web
+  become: true
+  tasks: 
+  - name: Install Tools
+    yum:
+      state: present
+      name:
+        - telnet

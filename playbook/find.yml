@@ -1,0 +1,11 @@
+- hosts: localhost
+  tasks:
+  - name: Ansible register variable basic example
+    shell: "find *.py"
+    args:
+      chdir: "/etc/ansibel/playbook"
+    register: find_output
+
+  - debug:
+      var: find_output
+
